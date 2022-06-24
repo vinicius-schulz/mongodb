@@ -34,17 +34,18 @@ public class EstadoEntityComponent {
 
 		return estado;
 	}
-	
+
 	public List<Estado> buscarTodos() {
 
 		final List<Estado> estados = this.estadoRepository.findAll();
-		
+
 		return estados;
 	}
 
 	public Estado criarEstado(EstadoDto estadoDto) {
 
 		Estado estado = new Estado();
+		estado.setId(UUID.randomUUID());
 		estado.setCodigoIbge(estadoDto.getCodigoIbge());
 		estado.setNome(estadoDto.getNome());
 		estado.setUf(estadoDto.getUf());
