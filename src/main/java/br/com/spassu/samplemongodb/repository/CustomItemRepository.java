@@ -1,4 +1,4 @@
-package com.example.mdbspringboot.repository;
+package br.com.spassu.samplemongodb.repository;
 
 public interface CustomItemRepository {
 	

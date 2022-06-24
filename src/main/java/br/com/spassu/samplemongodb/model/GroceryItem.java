@@ -1,4 +1,4 @@
-package com.example.mdbspringboot.model;
+package br.com.spassu.samplemongodb.model;
 
 import java.util.UUID;
 

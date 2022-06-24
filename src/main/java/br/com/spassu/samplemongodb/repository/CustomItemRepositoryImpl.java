@@ -1,4 +1,4 @@
-package com.example.mdbspringboot.repository;
+package br.com.spassu.samplemongodb.repository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
@@ -7,8 +7,9 @@ import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 import org.springframework.stereotype.Component;
 
-import com.example.mdbspringboot.model.GroceryItem;
 import com.mongodb.client.result.UpdateResult;
+
+import br.com.spassu.samplemongodb.model.GroceryItem;
 
 @Component
 public class CustomItemRepositoryImpl implements CustomItemRepository {

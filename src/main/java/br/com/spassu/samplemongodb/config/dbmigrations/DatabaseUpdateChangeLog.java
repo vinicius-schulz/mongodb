@@ -1,9 +1,11 @@
-package com.example.mdbspringboot.config.dbmigrations;
+package br.com.spassu.samplemongodb.config.dbmigrations;
 
-import com.example.mdbspringboot.model.GroceryItem;
-import com.example.mdbspringboot.repository.ItemRepository;
 import com.github.cloudyrock.mongock.ChangeLog;
 import com.github.cloudyrock.mongock.ChangeSet;
+
+import br.com.spassu.samplemongodb.model.GroceryItem;
+import br.com.spassu.samplemongodb.repository.ItemRepository;
+
 import java.util.UUID;
 
 /**

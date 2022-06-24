@@ -1,11 +1,11 @@
-package com.example.mdbspringboot.repository;
+package br.com.spassu.samplemongodb.repository;
 
 import java.util.List;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 
-import com.example.mdbspringboot.model.GroceryItem;
+import br.com.spassu.samplemongodb.model.GroceryItem;
 
 public interface ItemRepository extends MongoRepository<GroceryItem, String> {
 	

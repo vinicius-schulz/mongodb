@@ -1,4 +1,4 @@
-package com.example.mdbspringboot;
+package br.com.spassu.samplemongodb;
 
 
 import java.util.ArrayList;
@@ -11,15 +11,16 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
-import com.example.mdbspringboot.model.GroceryItem;
-import com.example.mdbspringboot.repository.CustomItemRepository;
-import com.example.mdbspringboot.repository.ItemRepository;
 import com.github.cloudyrock.spring.v5.EnableMongock;
+
+import br.com.spassu.samplemongodb.model.GroceryItem;
+import br.com.spassu.samplemongodb.repository.CustomItemRepository;
+import br.com.spassu.samplemongodb.repository.ItemRepository;
 
 @SpringBootApplication
 @EnableMongoRepositories
 @EnableMongock
-public class MdbSpringBootApplication implements CommandLineRunner{
+public class SampleMongoDbApplication implements CommandLineRunner{
 	
 	@Autowired
 	ItemRepository groceryItemRepo;
@@ -30,13 +31,13 @@ public class MdbSpringBootApplication implements CommandLineRunner{
 	List<GroceryItem> itemList = new ArrayList<GroceryItem>();
 
 	public static void main(String[] args) {
-		SpringApplication.run(MdbSpringBootApplication.class, args);
+		SpringApplication.run(SampleMongoDbApplication.class, args);
 	}
 	
 	public void run(String... args) {
 		
 		// Clean up any previous data
-		//groceryItemRepo.deleteAll(); // Doesn't delete the collection
+		groceryItemRepo.deleteAll(); // Doesn't delete the collection
 		
 		System.out.println("-------------CREATE GROCERY ITEMS-------------------------------\n");
 		
